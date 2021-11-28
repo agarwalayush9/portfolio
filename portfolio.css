@@ -27,51 +27,26 @@ body{
     /* display: flex;
     flex-wrap: wrap; */
 }
-#cursor{
-    position: absolute;
-    /* position: fixed; */
-    left: 70%;
-    text-align: left;
-    color: rgb(236, 60, 37);
-    width: 0px;
-    opacity: 0%;
-    background-color: rgb(235, 220, 173);
-    animation: move  steps(11) 2s;
-    /* animation: blink 1s linear infinite; */
-    z-index: 11;
+#dev{
+    overflow: hidden;
+    color: rgb(209, 69, 27);
+    border-right: 2px blue solid;
+    padding-right: 2px;
+    margin: 0 auto;
+    width: fit-content;
+    white-space: nowrap;
+    animation:
+     typing 2s steps(19,end),
+     blink .5s step-end infinite ;
 }
-#cursor1{
-    position: absolute;
-    /* position: fixed; */
-    left: 70%;
-    text-align: left;
-    color: rgb(236, 60, 37);
-    width: 0px;
-    z-index: 9;
-    /* opacity: 0%; */
-    background-color: rgb(235, 220, 173);
-    /* animation: move 2s steps(11) ; */
-    animation: blink 1s linear infinite;
-}
-@keyframes move {
-    0%{
-        opacity: 100%;
-        left: 52%;
-        width: 190px;
-    }
-    100%{
-        opacity:100% ;
-        width: 0px;
-        left: 71.5%;
-    }
+
+@keyframes typing {
+    from{width: 0%;}
+    to{width: 32%;}
 }
 @keyframes blink {
-    0%{
-        opacity: 0%;
-    }
-    100%{
-        opacity:100%;
-    }
+   from ,to{border-color: transparent;}
+   50%{border-color: rgb(70, 91, 214);}
 }
 #skills{
     background-color: rgba(24, 159, 212, 0.356);
