@@ -51,11 +51,12 @@ body{
 #skills{
     background-color: rgba(24, 159, 212, 0.356);
     padding: 20px;
+    width: fit-content;
     padding-top: 35px;
     padding-bottom: 30px;
     border-radius: 15px;
-    width: 700px;
-    margin-left: 100px;
+    /* width: 700px; */
+    /* margin-left: 100px; */
 }
 #language{
     display: flex;
@@ -102,7 +103,7 @@ header{
     float: left;
     margin-top: 40px;
     margin-left: 80px;
-
+    clear: right;
 }
 #open, .op{
     border-radius: 20px;
@@ -171,17 +172,18 @@ header{
 #contact{
     background-color: rgba(233, 150, 122, 0.459);
     padding: 30px;
-    height: 250px;
+    height: 300px;
+    /* height: fit-content; */
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 20px;
 }
 
 #contactForm{
-    padding-left: 20px;
     margin-left: 20px;
     border-left: gold 2px solid;
     padding: 5px;
+    /* position: absolute; */
     padding-left: 40px;
     /* width: fit-content;
     height: fit-content; */
@@ -208,6 +210,9 @@ label>input{
     background-color: inherit;
     border-bottom: 2px blue solid;
     padding: 2px;
+}
+input{
+    font-size: 17px;
 }
 #msg{
     color: rgb(0, 60, 255);
@@ -242,4 +247,39 @@ label>input{
 }
 #click{
     margin-top: 20px;
+}
+@media screen and (min-width:1120px) {
+body{
+    font-size:26px;
+}
+#profile{
+    height: 8em;
+    width: 7.6em;
+    margin-left: 80px;
+}
+#About_Me{
+    margin-left: 80px;
+    margin-right: 120px;
+}
+#skills{
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 1.1em;
+    /* padding-right: 5em; */
+}
+}
+@media screen and (min-width:1250px){
+    #contactForm{
+        margin-left: 100px;
+      }
+      input{
+          font-size: 20px;
+      }
+}
+@media screen and (max-width:975px){
+    #contact{
+       height: 450px;
+       /* width: 600px; */
+       /* margin-left: 60px; */
+    }
 }
