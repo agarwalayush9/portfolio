@@ -255,6 +255,7 @@ input{
 body{
     font-size:26px;
 }
+
 #profile{
     height: 8em;
     width: 7.6em;
@@ -287,6 +288,19 @@ body{
     }
 }
 @media screen and (max-width:680px) {
+    body{
+        font-size: 18px;
+    }
+    #About_Me{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #profile{
+        /* margin-right: 0; */
+       margin-bottom: 8px;
+        margin-left: 0;
+        float: none;
+    }
     .nav{
         margin-top: 1px;
         margin-bottom: 15px;
@@ -337,4 +351,10 @@ body{
     border-radius: 20px;
     padding: 5px;
     background-color: rgba(255, 0, 0, 0.267);
+}
+nav{
+    font-size: 22px;
+}
+.nav1{
+    background-color: rgb(221, 38, 38);
 }
