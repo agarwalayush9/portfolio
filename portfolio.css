@@ -39,6 +39,11 @@ body{
     animation:
      blink .5s step-end infinite ;
 }
+#contact1>a{
+    text-decoration-line: none;
+    color: rgb(12, 211, 211);
+    text-shadow: 1px 1px blue;
+}
 
 @keyframes blink {
    from ,to{border-color: transparent;}
@@ -339,20 +344,20 @@ body{
         margin-bottom: -40px;
         flex-wrap: wrap;
     }
-    #contact1{
-       margin-bottom: -10px;
-    }
+   
   #contact{
       width: 95%;
       margin: auto;
       margin-left: -12px;
       height: 520px;
       padding: auto;
+      background-image: url("img/contact.jpg");
+      background-size: contain;
   }
 #msg{
     margin:auto;
     margin-left: -50px;
-    margin-top: -50px;
+    margin-top: -15px;
 }
 #quote1>header{
     font-size: 20px;
