@@ -292,7 +292,7 @@ body{
     }
     #skills{
         margin-left: -22px;
-        background-image: url("/img/skills.jpg");
+        background-image: url("img/skills.jpg");
         background-blend-mode:soft-light;
         background-size: contain; 
     width: 100%;
