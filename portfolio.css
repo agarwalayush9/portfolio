@@ -339,9 +339,30 @@ body{
         margin-bottom: -40px;
         flex-wrap: wrap;
     }
-    /* main{
-        filter: blur(5px);
-    } */
+    #contact1{
+       margin-bottom: -10px;
+    }
+  #contact{
+      width: 95%;
+      margin: auto;
+      margin-left: -12px;
+      height: 520px;
+      padding: auto;
+  }
+#msg{
+    margin:auto;
+    margin-left: -50px;
+    margin-top: -50px;
+}
+#quote1>header{
+    font-size: 20px;
+    
+}
+#quote1{
+    width: 90%;
+    /* margin: auto; */
+    margin-left: -22px;
+}
 }
 #show{
     /* width: 200em; */
