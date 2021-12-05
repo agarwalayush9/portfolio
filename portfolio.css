@@ -5,7 +5,6 @@ html{
     font-size: 100%;
 }
 body{
-    background-image: url("img/portfolio.jpg");
     /* overflow: hidden; */
     background-repeat: repeat;
     /* background-repeat: no-repeat; */
@@ -23,14 +22,18 @@ body{
     padding-bottom: 60px;
     margin-left: 0px;
     text-align: center;
-    color: rgb(6, 25, 136);
+    overflow: hidden;
+    background-size: cover;
+    background-image: url("img/portfolio.jpg");
+    color: rgb(27, 8, 133);
+    font-weight: bold;
     border-radius: 10px;
     /* display: flex;
     flex-wrap: wrap; */
 }
 #dev{
     overflow: hidden;
-    color: rgb(209, 69, 27);
+    color: crimson;
     border-right: 2px blue solid;
     padding-right: 2px;
     margin: 0 auto;
@@ -43,7 +46,7 @@ body{
 
 @keyframes typing {
     from{width: 0%;}
-    to{width: 32%;}
+    to{width: 100%;}
 }
 @keyframes blink {
    from ,to{border-color: transparent;}
@@ -81,7 +84,7 @@ font-size: 22px;
     padding: 10px;
 }
 b{
-    color: rgb(209, 69, 27);
+    color: rgb(209, 27, 27);
 }
 h1{
     color: rgb(204, 120, 41);
@@ -294,6 +297,7 @@ body{
     #About_Me{
         margin-left: 0;
         margin-right: 0;
+        
     }
     #profile{
         /* margin-right: 0; */
