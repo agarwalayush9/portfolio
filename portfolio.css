@@ -37,14 +37,9 @@ body{
     width: fit-content;
     white-space: nowrap;
     animation:
-     typing 2s steps(19,end),
      blink .5s step-end infinite ;
 }
 
-@keyframes typing {
-    from{width: 0%;}
-    to{width: 100%;}
-}
 @keyframes blink {
    from ,to{border-color: transparent;}
    50%{border-color: rgb(70, 91, 214);}
@@ -52,7 +47,7 @@ body{
 #skills{
     background-color: rgba(24, 159, 212, 0.356);
     padding: 20px;
-    width: fit-content;
+    
     padding-top: 35px;
     padding-bottom: 30px;
     border-radius: 15px;
@@ -290,6 +285,38 @@ body{
 @media screen and (max-width:680px) {
     body{
         font-size: 18px;
+    }
+    #skills> header{
+        font-size: 30px;
+        text-shadow: rgb(9, 3, 98) 2px 2px;
+    }
+    #skills{
+        margin-left: -22px;
+        background-image: url("/img/skills.jpg");
+        background-blend-mode:soft-light;
+        background-size: contain; 
+    width: 100%;
+   
+    }
+    .border>span{
+        /* font-weight: bold; */
+        font-family: monospace;
+        color: rgb(192, 151, 17);
+        text-shadow: 1px 1px rgb(255, 17, 0);
+    }
+    .border>b{
+        font-size: 23px;
+        font-weight: bold;
+        text-shadow: 1px 1px rgb(241, 238, 53);
+        /* color: turquoise; */
+    }
+    .border{
+        font-size: 20px;
+        /* text-shadow: 1px 1px yellow;   */
+        width: 100%;
+        background-color: rgba(15, 163, 221, 0.479);
+        background-color: ;
+        /* display: flex; */
     }
     #About_Me{
         margin-left: 0;

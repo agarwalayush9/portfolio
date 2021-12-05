@@ -31,3 +31,13 @@ close.addEventListener("click",()=>{
     close.style.display= "none";
     blur.style.filter="blur(0px)"
 })
+let i=0;
+let typing= `I'm a WEB DEVELOPER`;
+let speed= 100;
+window.onload= setInterval( function type(){
+    if(i< typing.length){
+        document.getElementById("dev").innerHTML+= typing.charAt(i);
+        i++;
+        setTimeout(type, speed);
+    }
+},500);
