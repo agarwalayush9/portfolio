@@ -1,10 +1,3 @@
-let open= document.getElementById("open");
-open.style.display="none";
-let op =document.getElementById("click");
-op.addEventListener("click", ()=>{
-    open.style.display="block";
-    op.style.display="none";
-})
 let width= screen.width;
 let close= document.getElementById("close");
 let show= document.getElementById("show");
@@ -41,3 +34,10 @@ window.onload= setInterval( function type(){
         setTimeout(type, speed);
     }
 },500);
+let open= document.getElementById("open");
+open.style.display="none";
+let op =document.getElementById("click");
+op.addEventListener("click", ()=>{
+    open.style.display="block";
+    op.style.display="none";
+})

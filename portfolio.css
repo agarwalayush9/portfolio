@@ -7,7 +7,7 @@ html{
 body{
     background-image: url("img/portfolio.jpg");
     /* overflow: hidden; */
-    background-repeat: repeat;
+    /* background-repeat: repeat; */
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
     font-size: 20px;
@@ -23,14 +23,14 @@ body{
     padding-bottom: 60px;
     margin-left: 0px;
     text-align: center;
-    color: rgb(6, 25, 136);
+    color: rgb(0, 99, 165);
     border-radius: 10px;
     /* display: flex;
     flex-wrap: wrap; */
 }
 #dev{
     overflow: hidden;
-    color: crimson;
+    /* color: crimson; */
     border-right: 2px blue solid;
     padding-right: 2px;
     margin: 0 auto;
@@ -84,7 +84,8 @@ b{
     color: rgb(209, 27, 27);
 }
 h1{
-    color: rgb(204, 120, 41);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: rgb(240, 140, 9);
 }
 header{
     color: rgb(218, 9, 9);
@@ -102,7 +103,7 @@ header{
     width: 140px;
     border-radius: 50%;
     float: left;
-    margin-top: 40px;
+    margin-top:20px;
     margin-left: 80px;
     clear: right;
 }
@@ -409,4 +410,8 @@ nav{
 }
 .nav1{
     background-color: rgb(221, 38, 38);
+}
+footer{
+    margin-top: 11%;
+    padding: 0px;
 }
