@@ -52,7 +52,6 @@ body{
 #skills{
     background-color: rgba(24, 159, 212, 0.356);
     padding: 20px;
-    
     padding-top: 35px;
     padding-bottom: 30px;
     border-radius: 15px;
@@ -60,7 +59,7 @@ body{
     /* margin-left: 100px; */
 }
 #language{
-    display: flex;
+    /* display: flex; */
      flex-wrap: wrap;
 }
 .border:hover{
@@ -78,10 +77,15 @@ font-size: 22px;
     margin: 20px;
     border-radius: 10px;
     box-shadow: 1px 1px 2px 2px rgba(214, 194, 107, 0.904);
+    height: fit-content;
     padding: 10px;
+    width: fit-content;
 }
 b{
     color: rgb(209, 27, 27);
+}
+.left{
+    display: flex;
 }
 h1{
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -304,12 +308,6 @@ body{
     width: 100%;
    
     }
-    .border>span{
-        /* font-weight: bold; */
-        font-family: monospace;
-        color: rgb(192, 151, 17);
-        text-shadow: 1px 1px rgb(255, 17, 0);
-    }
     .border>b{
         font-size: 23px;
         font-weight: bold;
@@ -319,7 +317,7 @@ body{
     .border{
         font-size: 20px;
         /* text-shadow: 1px 1px yellow;   */
-        width: 100%;
+        width: fit-content;
         background-color: rgba(15, 163, 221, 0.479);
         /* display: flex; */
     }
@@ -414,4 +412,34 @@ nav{
 footer{
     margin-top: 11%;
     padding: 0px;
+}
+#html,#CSS,#javaScript,#j,#nodeJs,#cprogramming{
+    /* background: url('img/html5.png') ; */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center; */
+    position: absolute;
+    /* overflow: hidden; */
+    width: 50%;
+    margin-left: 10%;
+    display: flex;
+    opacity: 0.25;
+    height:18% 
+    /* background-repeat: no-repeat; */
+}
+#j{
+    height: 27%;
+}
+#nodeJs{
+    height: 14%;
+}
+#CSS{
+    opacity: 0.3;
+}
+#trans{
+    /* background-color: rgba(122, 226, 226, 0.568); */
+    text-shadow: wheat 0.5px 0.5px;
+    font-style: oblique;
+    font-weight: 600;
+    color: rgb(0, 41, 107);
 }
