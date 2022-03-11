@@ -63,11 +63,11 @@ body{
 }
 .border:hover{
 background-color: rgba(184, 152, 11, 0.568);
-font-size: 22px;
+/* font-size: 22px; */
 }
 #java:hover{
     background-color: rgba(245, 243, 132, 0.651);
-    font-size: 22px;
+    /* font-size: 22px; */
 }
 #node:hover ,#c:hover{
     background-color: rgba(149, 226, 250, 0.651);
