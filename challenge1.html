@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>challenge1</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <button id="close">❌</button>
+    <button id="show">≡</button>
+    <div id="navHid">
+        <nav id="nav">
+            <a class="nav nav1" href="index.html">About Me</a>
+            <a class="nav" href="skills.html">My skills /Projects</a>
+            <a class="nav" href="contact.html">Contact Me</a>
+        </nav>
+    </div>
+    <form action="" class="ch1" style="margin-top: 20px;">
+        <div id="form" >
+            <h1>
+                CONTACT DETAILS.. <br />
+                <span>*all details are mandatory to fill</span>
+            </h1>
+            <label>
+                <span>Name:</span>
+                <input type="text" id="name" placeholder="Full name" required />
+                <p id="invalid" style="color: rgb(218, 25, 63)"></p>
+            </label>
+            <label>
+                <span>Mobile number:</span>
+                <input type="number" id="number" placeholder="0123456789" required />
+                <p id="invalid1" style="color: rgb(218, 25, 63)"></p>
+            </label>
+            <label>
+                <span>Email id:</span>
+                <input type="email" name="email" id="email" placeholder="form123@abc" required />
+            </label>
+            <label>
+                <span>Subject:</span>
+                <select name="subject" id="subject">
+                    <option value="">select your subject</option>
+                    <option value="sing">Sing</option>
+                    <option value="draw">Draw</option>
+                    <option value="other">other then please specify</option>
+                </select>
+            </label>
+            <label>
+                <span>Message:</span>
+                <textarea name="message" id="message" placeholder="short message to describe" required></textarea>
+            </label>
+            <label>
+                <p class="submit" id="submit">Submit</p>
+            </label>
+        </div>
+        <div id="confirm"></div>
+    </form>
+    <!-- java script -->
+    <script>
+         const name = document.getElementById("name");
+        const number = document.getElementById("number");
+        const email = document.getElementById("email");
+        let validName;
+        let validNumber;
+
+        name.addEventListener("blur", () => {
+            // console.log("name");
+            let reg = /^([a-zA-Z])[a-zA-Z\s]{2,30}$/;
+            let input = name.value;
+            console.log(reg, input);
+
+            if (reg.test(input)) {
+                console.log("valid");
+                let invalid = document.getElementById("invalid");
+                invalid.innerHTML = ``;
+                let name1 = document.getElementById("name");
+                name1.setAttribute("style", "none");
+                validName = true;
+            } else {
+                console.log("invalid");
+                let invalid = document.getElementById("invalid");
+                invalid.innerHTML = `atleast 3 letters, !Numbers not allowed `;
+                let name1 = document.getElementById("name");
+                name1.setAttribute("style", "border:5px solid crimson");
+                validName = false;
+            }
+        });
+        number.addEventListener("blur", () => {
+            // console.log("name");
+            let reg = /^[0-9]{10}$/;
+            let input = number.value;
+            console.log(reg, input);
+            if (reg.test(input)) {
+                console.log("valid");
+                let invalid = document.getElementById("invalid1");
+                invalid.innerHTML = ``;
+                let name1 = document.getElementById("number");
+                name1.setAttribute("style", "none");
+                validNumber = true;
+            } else {
+                console.log("invalid");
+                let invalid = document.getElementById("invalid1");
+                invalid.innerHTML = `Enter a valid 10 digit number `;
+                let name1 = document.getElementById("number");
+                name1.setAttribute("style", "border:5px solid crimson");
+                validNumber = false;
+            }
+        });
+        let submit = document.getElementById("submit");
+        submit.addEventListener("click", () => {
+            console.log("clicked");
+            if (validName == true && validNumber == true) {
+                let form = document.getElementById("form");
+                form.setAttribute("style", "filter: blur(5px);");
+                let message = document.getElementById("confirm");
+                message.setAttribute("class", "message");
+                message.innerHTML = `
+                <h2>Details Submitted</h2>
+                <p>Click To Confirm or go back to make corrections.. </p>
+                <input type="submit"  id="done" class="done" value="Confirm">
+                <button id="back" class="back">GO back</button>`;
+                let back = document.getElementById("back");
+                back.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    console.log("back");
+                    message.removeAttribute("class","message");
+                    message.setAttribute("class","message1");
+                    form.removeAttribute("style", "filter: blur(5px);");
+                    message.innerHTML = ``;
+                });
+            } else {
+                console.log("invalid");
+                let form = document.getElementById("form");
+                form.setAttribute("style", "filter: blur(5px);");
+                let message = document.getElementById("confirm");
+                message.setAttribute("class","message2");
+                message.innerHTML = `
+                <p>Enter valid details</p>
+                <button id="back" class="back">GO back</button>`;
+
+                 let back = document.getElementById("back");
+                back.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    console.log("back");
+                    message.removeAttribute("class","message2");
+                    message.setAttribute("class","message3");
+                    form.removeAttribute("style", "filter: blur(5px);");
+                    message.innerHTML = ``;
+                });
+            }
+        });
+    </script>
+    <script src="portfolio.js"></script>
+</body>
+</html>
