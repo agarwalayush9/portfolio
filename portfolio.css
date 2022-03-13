@@ -747,16 +747,22 @@ select {
     box-shadow: 2px 2px crimson;
     padding: 3px;
     padding-top: 1px;
-    float: right;
+    /* float: right; */
     /* position: absolute; */
     text-decoration: none;
     /* margin-top: 20px; */
     /* margin-right: 16px; */
 }
-.formImg{
+.formImg, .notesImg{
     float: right;
     width: 15%;
     border-radius: 40%;
     margin-top: -12px;
     height: 100px;
+}
+.notesImg{
+    float: left;
+    border-radius: 20%;
+    margin-top: -2px;
+    margin-right: 10px;
 }
