@@ -306,13 +306,15 @@ body{
         text-shadow: rgb(9, 3, 98) 2px 2px;
     }
     #skills{
-        margin-left: -22px;
+        margin-left: -23px;
         /* background-image: url("img/skills.jpg"); */
+        /* width: 390%; */
+        padding: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         background-blend-mode:soft-light;
         background-size: contain; 
-        
-    width: 100%;
-   
+        width: 110%;  
     }
     .border>b{
         font-size: 23px;
@@ -324,7 +326,9 @@ body{
         font-size: 20px;
         /* text-shadow: 1px 1px yellow;   */
         width: fit-content;
+        margin: 10px;
         background-color: rgba(15, 163, 221, 0.479);
+        /* padding: 0; */
         /* display: flex; */
     }
     #About_Me{
@@ -371,7 +375,7 @@ body{
 #quote1{
     width: 90%;
     /* margin: auto; */
-    margin-left: -22px;
+    margin-left: -18px;
 }
 }
 #show{
