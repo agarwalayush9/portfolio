@@ -26,7 +26,7 @@
         </nav>
     </div>
     <main id="blur">
-       <section id="contact">
+        <section id="contact">
             <header>Contact Me</header>
             <div id="contact1">
                 <br>
@@ -38,36 +38,70 @@
             </div><br>
             <div id="contactForm">
                 <span id="msg">MESSAGE</span><br>
-                <label>
-                    <span>Name:</span>
-                    <input type="text" id="name" placeholder="Full name" required />
-                    <p id="invalid" style="color: rgb(218, 25, 63)"></p>
-                </label>
-                <label>
-                    <span>Mobile number:</span>
-                    <input type="number" id="number" placeholder="0123456789" required />
-                    <p id="invalid1" style="color: rgb(218, 25, 63)"></p>
-                </label>
-                <label>
-                    <span>Email id:</span>
-                    <input type="email" name="email" id="email" placeholder="form123@abc" required />
-                </label><br>
-                <label>
-                    <span>Subject:</span>
-                    <input type="text" placeholder="subject">
-                </label><br>
-                <label for="submit">
-                    <button id="submit">send</button>
-                </label>
+                <form id="cont" name="contact-form">
+                    <label for="name">
+                        <span>Name:</span>
+                        <input type="text" name="name" id="name" placeholder="Full name" required />
+                        <p id="invalid" style="color: rgb(218, 25, 63)"></p>
+                    </label>
+                    <label for="number">
+                        <span>Mobile number:</span>
+                        <input type="number" id="number" name="number" placeholder="0123456789" required />
+                        <p id="invalid1" style="color: rgb(218, 25, 63)"></p>
+                    </label>
+                    <label for="Email">
+                        <span>Email id:</span>
+                        <input type="email" name="email" id="email" placeholder="form123@abc" required />
+                    </label><br>
+                    <label for="subject">
+                        <span>Subject:</span>
+                        <input type="text" name="message" placeholder="subject">
+                    </label><br>
+                    <label for="submit">
+                        <button type="submit" name="submit" id="submit">send</button>
+                    </label>
             </div>
+            </form>
+            <div id="confirm"></div>
         </section>
     </main>
     <footer>
-        <a href="https://www.linkedin.com/in/ayush-agarwal52" target="_blank"><img src="img/linkedinIcon.png" alt="linkedin" style="border-radius: 5px;" class="icon"></a>
-        <a href="https://github.com/agarwalayush9" target="_blank"><img src="img/GitHub-Mark-64px.png" alt="Github" class="icon" style="margin-left: 30px;"></a><br>
+        <a href="https://www.linkedin.com/in/ayush-agarwal52" target="_blank"><img src="img/linkedinIcon.png"
+                alt="linkedin" style="border-radius: 5px;" class="icon"></a>
+        <a href="https://github.com/agarwalayush9" target="_blank"><img src="img/GitHub-Mark-64px.png" alt="Github"
+                id="git" class="icon" style="margin-left: 30px;"></a><br>
         <a class="a" href="#">Created By Ayush Agarwal| &copy; 2022 All rights reserved </a>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="portfolio.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyRpd4rgh0QQWiNhboGLzRGVesdIQXobjwDwvYoNMcwckWZCQeO2WXhGugDkm4GicjupA/exec'
+        const form = document.forms['contact-form']
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response =>{
+                    let cont = document.getElementById("cont");
+                cont.setAttribute("style", "filter: blur(5px);");
+                let message = document.getElementById("confirm");
+                message.setAttribute("class", "message");
+                message.innerHTML = `
+                <h2> Message Sent ! </h2>
+                <p>Thanks for texting to me , I will get back to you shortly..</p>
+                <button id="back" class="back"> OK </button>`;
+                let back = document.getElementById("back");
+                back.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    message.removeAttribute("class","message");
+                    message.setAttribute("class","message1");
+                    cont.removeAttribute("style", "filter: blur(5px);");
+                    message.innerHTML = ``;
+                    cont.reset();
+                });
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 
 </html>
