@@ -75,19 +75,20 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="portfolio.js"></script>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyRpd4rgh0QQWiNhboGLzRGVesdIQXobjwDwvYoNMcwckWZCQeO2WXhGugDkm4GicjupA/exec'
-        const form = document.forms['contact-form']
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response =>{
-                    let cont = document.getElementById("cont");
+        let name = document.getElementById("name");
+        let number = document.getElementById("number");
+        let cont = document.getElementById("cont");
+        let sub= document.getElementById("submit");
+
+        sub.addEventListener("click",()=>{
+            if(name.value != '' && number.value != ''){
                 cont.setAttribute("style", "filter: blur(5px);");
                 let message = document.getElementById("confirm");
                 message.setAttribute("class", "message");
                 message.innerHTML = `
                 <h2> Message Sent ! </h2>
-                <p>Thanks for texting to me , I will get back to you shortly..</p>
+                <p>Thanks <b> ${name.value} </b> for texting , I will get back to you shortly..</p>
+                <br>
                 <button id="back" class="back"> OK </button>`;
                 let back = document.getElementById("back");
                 back.addEventListener("click", (e) => {
@@ -96,10 +97,34 @@
                     message.setAttribute("class","message1");
                     cont.removeAttribute("style", "filter: blur(5px);");
                     message.innerHTML = ``;
-                    cont.reset();
+        });}
+        else{
+            cont.setAttribute("style", "filter: blur(5px);");
+                let message = document.getElementById("confirm");
+                message.setAttribute("class","message2");
+                message.innerHTML = `
+                <p>Enter valid details</p>
+                <button id="back" class="back">GO back</button>`;
+
+                 let back = document.getElementById("back");
+                back.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    console.log("back");
+                    message.removeAttribute("class","message2");
+                    message.setAttribute("class","message3");
+                    cont.removeAttribute("style", "filter: blur(5px);");
+                    message.innerHTML = ``;
                 });
-                })
-                .catch(error => console.error('Error!', error.message))
+        }
+    });
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyRpd4rgh0QQWiNhboGLzRGVesdIQXobjwDwvYoNMcwckWZCQeO2WXhGugDkm4GicjupA/exec'
+        const form = document.forms['contact-form']
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response =>{
+                    cont.reset()
+                }).catch(error => console.error('Error!', error.message))
         })
     </script>
 </body>
