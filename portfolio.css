@@ -472,7 +472,7 @@ input[type=number]{
     top: 150px;
     right: 35px;
 }
-    
+
 }
 @media screen and (max-width:680px) {
     body {
@@ -559,7 +559,11 @@ input[type=number]{
         /* background-image: url("img/contact.jpg"); */
         background-size: contain;
     }
-
+    @media screen and (max-width:370px) {
+        #contact{
+            height: 570px;
+        }
+    }
     #msg {
         margin: auto;
         margin-left: -50px;
