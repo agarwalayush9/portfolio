@@ -14,10 +14,12 @@ dm.style.display = "none";
 b.classList.add("bl");
 dm.addEventListener('click', () => {
     b.classList.add("bl");
+    
     b.classList.remove("bd");
     dm.style.display = "none";
     lm.style.display = "block";
     wd.style.backgroundColor="aliceblue";
+    document.getElementById("About_Me").style.color= "rgb(0, 99, 165)";
     wd.innerText="Light mode";
     setInterval(() => {
         wd.innerText="";
@@ -26,6 +28,7 @@ dm.addEventListener('click', () => {
 })
 lm.addEventListener('click', () => {
     b.classList.add("bd");
+    document.getElementById("About_Me").style.color= "whitesmoke";
     b.classList.remove("bl");
     lm.style.display = "none";
     dm.style.display = "block";
@@ -48,7 +51,7 @@ show.addEventListener('click', () => {
     nav.style.display = "block";
     show.style.display = "none";
     close.style.display = "block";
-    blur.style.filter = "blur(1px)"
+    blur.style.filter = "blur(10px)"
 })
 close.addEventListener("click", () => {
     nav.style.display = "none";
